@@ -1,3 +1,12 @@
+$blue: #5c87db;
+$red: #f00;
+$white: #fff;
+$shadow: #cdcdcd;
+$find-btn-disabled-bg: #b7bac1;
+$time-btn-bg: #dde3ee;
+$time-btn-text: #5c5c5c;
+$price-left-border: #eef1f6;
+
 * {
     margin: 0;
     padding: 0;
@@ -18,11 +27,11 @@
             max-width: 960px;
             height: 180px;
             border-radius: 15px;
-            box-shadow: 0px 0px 10px #cdcdcd;
+            box-shadow: 0px 0px 10px $shadow;
 
             &_data {
                 height: 50%;
-                background-color: #5c87db;
+                background-color: $blue;
                 border-top-right-radius: 15px;
                 border-top-left-radius: 15px;
                 padding: 15px;
@@ -33,7 +42,7 @@
                 label {
                     display: flex;
                     flex-direction: column;
-                    color: white;
+                    color: $white;
                     font-size: 12px;
                     width: 100%;
 
@@ -76,7 +85,8 @@
                     }
 
                     .error {
-                        border: 2px solid red;
+                        padding: 0 8px;
+                        border: 2px solid $red;
                     }
                 }
             }
@@ -92,8 +102,8 @@
                     border-radius: 10px;
                     border: none;
                     outline: none;
-                    background-color: #5c87db;
-                    color: white;
+                    background-color: $blue;
+                    color: $white;
                     width: 160px;
                     height: 40px;
                     font-size: 16px;
@@ -105,7 +115,7 @@
                 }
 
                 .disabled {
-                    background-color: #b7bac1;
+                    background-color: $find-btn-disabled-bg;
                 }
             }
         }
@@ -116,7 +126,7 @@
 
         &_ticket {
             width: 980px;
-            box-shadow: 0px 0px 10px #cdcdcd;
+            box-shadow: 0px 0px 10px $shadow;
             border-radius: 15px;
             display: flex;
             margin: 0 auto;
@@ -129,7 +139,7 @@
             }
 
             .border {
-                border-bottom: 1px dashed #5c87db;
+                border-bottom: 1px dashed $blue;
             }
 
             &_info {
@@ -139,7 +149,7 @@
                 padding: 25px 0px;
 
                 &_type {
-                    background-color: #5c87db;
+                    background-color: $blue;
                     border-top-left-radius: 15px;
                     border-bottom-right-radius: 15px;
                     width: 130px;
@@ -147,7 +157,7 @@
                     position: absolute;
                     left: 0px;
                     top: 0px;
-                    color: white;
+                    color: $white;
                     text-align: center;
                     font-size: 12px;
                     padding-top: 4px;
@@ -211,10 +221,10 @@
                             gap: 5px;
                             width: 130px;
                             height: 40px;
-                            border: 2px solid #dde3ee;
+                            border: 2px solid $time-btn-bg;
                             border-radius: 10px;
                             cursor: pointer;
-                            color: #5c5c5c;
+                            color: $time-btn-text;
                             font-size: 14px;
 
                             span:first-of-type {
@@ -224,7 +234,7 @@
                         }
 
                         .selected {
-                            background-color: #dde3ee;
+                            background-color: $time-btn-bg;
                             height: 50px;
                             font-size: 16px;
 
@@ -244,7 +254,7 @@
                 font-size: 36px;
                 font-weight: 700;
                 width: 20%;
-                border-left: 2px solid #eef1f6;
+                border-left: 2px solid $price-left-border;
             }
         }
     }
